@@ -1,0 +1,43 @@
+﻿@model Mortgage 
+
+<div>
+    <h2>
+        Calculate Your Monthly Payment !!
+    </h2>
+</div>
+
+<div>
+
+    <form method="post" action="~/ClientController1/CalculateMortgage">
+        <div class="mb-3">
+            <label for="TotalLoanAmount" class="form-label">Loan Amount</label>
+            <input type="number" class="form-control" name="TotalLoanAmount" placeholder="Enter the loan Amount">
+        </div>
+        <div class="mb-3">
+            <label for="DownPayment" class="form-label">Down Payment</label>
+            <input type="number" class="form-control" name="DownPayment" placeholder="Down Payment">
+        </div>
+        <div class="mb-3">
+            <label for="Apr" class="form-label">Annual Interest Rate</label>
+            <input type="number" step="any" class="form-control" name="Apr" placeholder="divid your apr by 100">
+        </div>
+        <div class="mb-3">
+            <label for="LoanTerm" class="form-label">Loan Lenght</label>
+            <input type="number" class="form-control" name="LoanTerm" placeholder="Enter the loan Lenght">
+        </div>
+        <div class="mb-3">
+            <label for="PropertyTax" class="form-label">Property Tax</label>
+            <input type="number" class="form-control" name="PropertyTax" placeholder="Enter the Property Tax">
+        </div>
+         <div class="mb-3">
+            <label for="Insurance" class="form-label">Insurance</label>
+            <input type="number" class="form-control" name="Insurance" placeholder="Enter the Property Tax">
+        </div>
+        <div class="mb-3">
+            <label for="MonthlyPayment" class="form-label">Mortgage Payment</label>
+            <input type="number"value="@Model.MonthlyPayment" class="form-control" name="MonthlyPayment" placeholder="your Mortgage">
+        </div>
+        <button type="Submit" class="btn btn-primary">Submit Info</button>
+    </form>
+</div>
+
